@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planer_AspNet", "Planer_AspNet\Planer_AspNet.csproj", "{FEA76F33-F1F7-408C-B502-F801A26DEA0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA76F33-F1F7-408C-B502-F801A26DEA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA76F33-F1F7-408C-B502-F801A26DEA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA76F33-F1F7-408C-B502-F801A26DEA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA76F33-F1F7-408C-B502-F801A26DEA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0365076C-D5F0-4D10-9FC5-601E65666616}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Planer_AspNet.Models.PlanViewModel>
+
+@{
+    ViewBag.Title = "ListPlans";
+}
+
+<h2>ListPlans</h2>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Calendar", "Plan", FormMethod.Get, new { id = "dateForm" }))
+{
+    @Html.TextBox("date", null, new { type = "date", id = "mydate" })
+}
+
+@using (Html.BeginForm("Find", "Plan", FormMethod.Post))
+
+{
+    <table style="float:left;">
+        <tr>
+            <td><input type="text" value="" name="FT" /> </td>
+            <td><input type="submit" value="Search" /> </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Img)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.EditorFor(modelItem => item.IsPriority)
+            </td>
+            <td>
+                <img style="height: 120px; width:200px ; border-radius:8px;" src="@item.Img">
+            </td>
+            <td>
+                @Html.ActionLink("Create", "Create", new { id = item.Id })
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    onload = () => {
+        document.getElementById("mydate").onchange = () => {
+            document.getElementById("dateForm").submit();
+        }
+    }
+</script>
